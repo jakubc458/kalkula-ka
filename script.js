@@ -23,16 +23,3 @@ document.getElementById('calcForm').addEventListener('submit', function(e) {
         Stav: <strong>${status}</strong>
     `;
 });
-function odporucanyPrierez(rozpon) {
-    // orientačne podľa tabuliek pre smrek C24, pre zaťaženie do 5,2kN/m
-    if (rozpon <= 3) return "100 × 160 mm";
-    if (rozpon <= 4) return "100 × 200 mm";
-    if (rozpon <= 5) return "120 × 240 mm";
-    if (rozpon <= 6) return "140 × 280 mm";
-    return "Navrhnite individuálne – kontaktujte statika.";
-}
-
-// ... v rámci výpočtovej funkcie:
-document.getElementById("suggestedSection").innerText = 
-  "Odporúčaný prierez (smrek C24): " + odporucanyPrierez(rozpon) + 
-  " (pri zaťažení 5,2 kN/m)";

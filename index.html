@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4CAF50">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <title>Statika Pomúrnice</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Výpočet statiky pomúrnice</h1>
+        <form id="calcForm">
+            <label for="span">Rozpätie (m):</label>
+            <input type="number" id="span" step="0.01" value="6">
+
+            <label for="width">Šírka prierezu (mm):</label>
+            <input type="number" id="width" value="120">
+
+            <label for="height">Výška prierezu (mm):</label>
+            <input type="number" id="height" value="280">
+
+            <label for="load">Zaťaženie (kN/m):</label>
+            <input type="number" id="load" step="0.1" value="1.0">
+
+            <button type="submit">Vypočítať</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
